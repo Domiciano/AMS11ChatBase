@@ -43,4 +43,9 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessageRow> {
         messages.add(message);
         notifyDataSetChanged();
     }
+
+    public void clear() {
+        messages.clear();
+        notifyDataSetChanged();
+    }
 }

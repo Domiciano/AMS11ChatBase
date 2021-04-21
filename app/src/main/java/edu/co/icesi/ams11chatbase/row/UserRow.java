@@ -25,7 +25,11 @@ public class UserRow extends RecyclerView.ViewHolder {
     private void showChat(View view) {
         Context context = view.getContext();
         Intent i = new Intent(view.getContext(), ChatActivity.class);
+        context.getSharedPreferences("data", Context.MODE_PRIVATE)
+                .edit()
+                .putString("username2", usernameTV.getText().toString()).apply();
         context.startActivity(i);
+
     }
 
     public TextView getUsernameTV() {
