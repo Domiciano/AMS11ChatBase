@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "908875367312",
+    "firebase_url": "https://alfa-43471-default-rtdb.firebaseio.com",
+    "project_id": "alfa-43471",
+    "storage_bucket": "alfa-43471.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:908875367312:android:2a0a96aa92dfd9a56f2915",
+        "android_client_info": {
+          "package_name": "edu.co.icesi.ams11chatbase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "908875367312-4nj4572sleqkkv7mtndl9emv4gs7bce3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQ9obZufqcdjYNCLbiTAGUUzGDLtjq994"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "908875367312-4nj4572sleqkkv7mtndl9emv4gs7bce3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

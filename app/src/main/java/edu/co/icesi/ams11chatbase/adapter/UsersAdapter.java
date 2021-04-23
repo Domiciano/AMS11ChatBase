@@ -29,6 +29,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UserRow> {
     public void onBindViewHolder(UserRow holder, int position) {
         User user = users.get(position);
         holder.getUsernameTV().setText(user.username);
+        holder.setId(users.get(position).id);
     }
 
     @Override

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,10 +21,18 @@ public class ChatActivity extends AppCompatActivity {
     
     private MessagesAdapter messagesAdapter;
 
+    private String id1, id2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
+
+
+        SharedPreferences sp = getSharedPreferences("data", MODE_PRIVATE);
+        id1 = sp.getString("id1", "NO_ID");
+        id2 = sp.getString("id2", "NO_ID");
+
 
         personTitle = findViewById(R.id.personTitle);
         messagesList = findViewById(R.id.messagesList);
