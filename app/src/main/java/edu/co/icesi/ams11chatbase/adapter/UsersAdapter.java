@@ -40,4 +40,13 @@ public class UsersAdapter extends RecyclerView.Adapter<UserRow> {
         users.add(user);
         notifyDataSetChanged();
     }
+
+    public User getLastUser() {
+        return users.get(users.size()-1);
+    }
+
+    public void clear() {
+        users.clear();
+        notifyDataSetChanged();
+    }
 }
