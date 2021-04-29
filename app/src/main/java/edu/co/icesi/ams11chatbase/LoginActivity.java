@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.UUID;
 
@@ -33,6 +34,8 @@ public class LoginActivity extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
 
         signinBtn.setOnClickListener(this::login);
+
+        FirebaseMessaging.getInstance().subscribeToTopic("promocion");
 
     }
 

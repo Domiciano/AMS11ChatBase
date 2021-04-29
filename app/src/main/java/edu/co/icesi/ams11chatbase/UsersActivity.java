@@ -71,6 +71,9 @@ public class UsersActivity extends AppCompatActivity {
                     Log.e(">>>", "BOTTOM");
                     //Cargar los siguientes
                     String ultimousuario = userAdapter.getLastUser().username;
+
+
+
                     getData(ultimousuario);
                 }
             }
@@ -115,4 +118,33 @@ public class UsersActivity extends AppCompatActivity {
                 }
         );
     }
+
+
+
+    public class Waiter extends Thread{
+
+        public int millis = 400;
+
+        @Override
+        public void run(){
+            while(millis<400){
+                delay(10);
+                millis-=10;
+            }
+            //ACCION
+            searchUsername(searchET.getText().toString());
+        }
+
+        public void delay(long time){
+            try {
+                Thread.sleep(time);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+
+
 }

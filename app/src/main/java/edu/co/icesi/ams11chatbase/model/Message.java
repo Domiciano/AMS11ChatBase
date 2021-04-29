@@ -6,11 +6,13 @@ public class Message {
 
     }
 
-    public Message(String id, String body){
+    public Message(String id, String body, long ts){
         this.id = id;
         this.body = body;
+        this.date = ts;
     }
 
-    public String body;
     public String id;
+    public String body;
+    public long date;
 }

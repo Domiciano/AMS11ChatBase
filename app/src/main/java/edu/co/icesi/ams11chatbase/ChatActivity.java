@@ -13,7 +13,9 @@ import android.widget.TextView;
 
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 
+import java.util.Date;
 import java.util.UUID;
 
 import edu.co.icesi.ams11chatbase.adapter.MessagesAdapter;
@@ -58,6 +60,7 @@ public class ChatActivity extends AppCompatActivity {
 
         db.collection("chat")
                 .document(concat).collection("messages")
+                .orderBy("date", Query.Direction.DESCENDING)
                 .addSnapshotListener(
                         (value, error) -> {
                             messagesAdapter.clear();
@@ -72,8 +75,10 @@ public class ChatActivity extends AppCompatActivity {
         sendBtn.setOnClickListener(
                 v -> {
 
+
+
                     String id = UUID.randomUUID().toString();
-                    Message message = new Message(id, messageET.getText().toString());
+                    Message message = new Message(id, messageET.getText().toString(), new Date().getTime());
 
 
                     db.collection("chat")
